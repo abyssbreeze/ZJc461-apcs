@@ -3,20 +3,9 @@
 
     #define long long int  
 
-    
-   //階乘
-    // int i(int n){
-    //   int ans = 1 ;
-    //   for (int i = 1; i <= n; i++) {
-    //     ans *= i;
-    //   }
-    //   return ans ;
-    // }
-
-
     int main(){
-      // cin.sync_with_stdio(0) ;
-      // cin.tie(0) ;
+      cin.sync_with_stdio(0) ;
+      cin.tie(0) ;
 
       int a,b,c ;
       bool co = 0;
