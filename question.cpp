@@ -18,38 +18,67 @@
       // cin.sync_with_stdio(0) ;
       // cin.tie(0) ;
 
-      int n ;
-      int d ;
-      int m ;
-      int sm ;
-      int min , max ;
-      int av  ;
-      int num = 0 ;
-      int sum = 0 ;
+      int a,b,c ;
+      bool co = 0;
+      cin>>a>>b>>c ;
 
-      cin>>n>>d ;
-      for(int i = 0 ; i<n ; i++){
-        sm = 0 ;
-        min = 101 ;
-        max = -1 ;
-        for(int j = 0 ; j<3 ;j++){
-          cin>>m ;
-          sm += m ;
-          if(m>max){
-            max = m ;
-          }
-          else if(m<min){
-            min = m ;
-          }          
+      if(c==0){
+        if(a==0&&b==0){
+        cout<<"AND\n" ;
+        co = 1 ;
         }
-        av = sm/3 ;
-        if(max-min>=d){
-          num++ ;
-          sum += av ;
+        else if(a!=0&&b==0){
+          cout<<"AND\n" ;
+          co = 1 ;
+        }
+        else if(a==0&&b!=0){
+          cout<<"AND\n" ;
+          co = 1 ;
+        }
+        if(a==0&&b==0){
+          cout<<"OR\n" ;
+          co = 1 ;
+        }
+        if(a==0&&b==0){
+          cout<<"XOR\n" ;
+          co = 1 ;
+        }
+        else if(a!=0&&b!=0){
+          cout<<"XOR\n" ;
+          co = 1 ;
         }
       }
-      cout<<num<<" "<<sum<<"\n" ;
 
+      else if(c==1){
+        if(a!=0&&b!=0){
+        cout<<"AND\n" ;
+        co = 1 ;
+        }
+        if(a!=0&&b==0){
+          cout<<"OR\n" ;
+          co = 1 ;
+        }
+        else if(a==0&&b!=0){
+          cout<<"OR\n" ;
+          co = 1 ;
+        }
+       else if(a!=0&&b!=0){
+          cout<<"OR\n" ;
+          co = 1 ;
+        }
+        if(a!=0&&b==0){
+          cout<<"XOR\n" ;
+          co = 1 ;
+        }
+        else if(a==0&&b!=0){
+          cout<<"XOR\n" ;
+          co = 1 ;
+        }
+      }
+      if(co==0){
+        cout<<"IMPOSSIBLE\n" ;
+      }
+      
       return 0 ;
 }
     
